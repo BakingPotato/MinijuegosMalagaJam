@@ -1,18 +1,223 @@
 [gd_scene format=3 uid="uid://bq1kr5ib3ukcl"]
 
 [ext_resource type="Script" uid="uid://hrur0qggouqn" path="res://Minigames/ThePlaylistMinigame/playlist_game_manager.gd" id="1_lddvi"]
-[ext_resource type="Texture2D" uid="uid://17dpn5lmdt4y" path="res://Sprites/fondoPlaceholder.png" id="2_53nl2"]
 [ext_resource type="Resource" uid="uid://d4hsw4n2uwjji" path="res://Minigames/ThePlaylistMinigame/Scripts/ThePlaylistData.tres" id="2_ugyv7"]
-[ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="3_ugyv7"]
+[ext_resource type="Texture2D" uid="uid://bp8pivgmsxfog" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_BG1.png" id="3_kvh6d"]
+[ext_resource type="Texture2D" uid="uid://du0w54npatqku" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_BG2.png" id="4_sp821"]
+[ext_resource type="Texture2D" uid="uid://gvtg13laseks" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_BG3.png" id="5_pwh0f"]
+[ext_resource type="Texture2D" uid="uid://b3k55c1blmtp5" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_TV.png" id="6_w60i8"]
+[ext_resource type="Texture2D" uid="uid://bu41t820juqy1" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Canción.png" id="7_1ipwy"]
+[ext_resource type="Texture2D" uid="uid://bedsy255ecfrd" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Móvil.png" id="8_sp821"]
+[ext_resource type="Texture2D" uid="uid://brn6dm3h1jenn" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Botón.png" id="9_pwh0f"]
+[ext_resource type="Texture2D" uid="uid://8uqe4d8e7wc" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Dedo1.png" id="10_yxec2"]
+[ext_resource type="Texture2D" uid="uid://crfdkqq4tfru2" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Dedo2.png" id="11_l6jsd"]
+[ext_resource type="Texture2D" uid="uid://o7asbypf2xwx" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Dedo3.png" id="12_i0i8j"]
+[ext_resource type="Texture2D" uid="uid://bsjc7vo80arp0" path="res://Minigames/ThePlaylistMinigame/Sprites/IMG_Dedo4.png" id="13_wab8o"]
+
+[sub_resource type="Animation" id="Animation_fpsvy"]
+resource_name = "Player1"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.02, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-908.99994, -413.00003), Vector2(-923, -168.00002), Vector2(-908.99994, -413.00003)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onPlayer1AnimationEnd"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ihx6v"]
+resource_name = "Player2"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(939, -401), Vector2(938, -155), Vector2(939, -401)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onPlayer2AnimationEnd"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_8o8a7"]
+resource_name = "Player3"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-952, 432), Vector2(-933, 162), Vector2(-952, 432)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onPlayer3AnimationEnd"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ildq6"]
+resource_name = "Player4"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(900, 407), Vector2(903, 136), Vector2(900, 407)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onPlayer4AnimationEnd"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dspg6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-908.99994, -413.00003)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(939, -401)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-952, 432)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(900, 407)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8h40b"]
+_data = {
+&"Player1": SubResource("Animation_fpsvy"),
+&"Player2": SubResource("Animation_ihx6v"),
+&"Player3": SubResource("Animation_8o8a7"),
+&"Player4": SubResource("Animation_ildq6"),
+&"RESET": SubResource("Animation_dspg6")
+}
 
 [node name="ThePlaylistMinigame" type="Node" unique_id=420210782]
 script = ExtResource("1_lddvi")
 minigameData = ExtResource("2_ugyv7")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1572686470]
+[node name="Background" type="Node" parent="." unique_id=653176006]
+
+[node name="BG_1" type="TextureRect" parent="Background" unique_id=1572686470]
 offset_right = 1923.0
 offset_bottom = 1080.0
-texture = ExtResource("2_53nl2")
+texture = ExtResource("3_kvh6d")
+
+[node name="BG_2" type="TextureRect" parent="Background" unique_id=1815774546]
+offset_right = 1925.0
+offset_bottom = 1078.0
+texture = ExtResource("4_sp821")
+
+[node name="BG_3" type="TextureRect" parent="Background" unique_id=1427373738]
+offset_right = 1925.0
+offset_bottom = 1081.0
+texture = ExtResource("5_pwh0f")
 
 [node name="Timer" type="Timer" parent="." unique_id=1973962828]
 one_shot = true
@@ -21,92 +226,336 @@ one_shot = true
 
 [node name="CurrentMusicUI" type="Node" parent="UI" unique_id=906985323]
 
-[node name="CurrentSongLabel" type="Label" parent="UI/CurrentMusicUI" unique_id=1730336529]
-offset_left = 552.0
-offset_top = 253.0
-offset_right = 763.0
-offset_bottom = 276.0
-text = "Ahora sonando: La tienda"
+[node name="IMG_TV" type="TextureRect" parent="UI/CurrentMusicUI" unique_id=105192169]
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 1923.0
+offset_bottom = 1079.0
+texture = ExtResource("6_w60i8")
 
-[node name="TextureRect" type="TextureRect" parent="UI/CurrentMusicUI" unique_id=105192169]
-offset_left = 529.0
-offset_top = 281.0
-offset_right = 826.0
-offset_bottom = 581.0
-texture = ExtResource("3_ugyv7")
+[node name="CurrentSongLabel" type="Label" parent="UI/CurrentMusicUI" unique_id=1730336529]
+offset_left = 452.0
+offset_top = 165.0
+offset_right = 856.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 30
+text = "Ahora sonando: La tienda"
+vertical_alignment = 1
 
 [node name="NextSongInLabel" type="Label" parent="UI/CurrentMusicUI" unique_id=1181535261]
-offset_left = 547.0
-offset_top = 584.0
-offset_right = 810.0
-offset_bottom = 607.0
+offset_left = 454.0
+offset_top = 686.0
+offset_right = 843.0
+offset_bottom = 740.0
+theme_override_font_sizes/font_size = 30
 text = "Siguiente canción en: "
+vertical_alignment = 1
 
 [node name="TimeLeftLabel" type="Label" parent="UI/CurrentMusicUI/NextSongInLabel" unique_id=611787811]
 layout_mode = 0
-offset_left = 8.0
+offset_left = -11.0
 offset_top = 32.0
-offset_right = 243.0
-offset_bottom = 166.0
-theme_override_font_sizes/font_size = 70
+offset_right = 379.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 100
 text = "7"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NextSongUI" type="Node" parent="UI" unique_id=1244936880]
 
-[node name="NextSongLabel1" type="Label" parent="UI/NextSongUI" unique_id=147958766]
-offset_left = 888.0
-offset_top = 255.0
-offset_right = 1366.0
-offset_bottom = 303.0
+[node name="IMG_NextSong1" type="TextureRect" parent="UI/NextSongUI" unique_id=1753987257]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_1ipwy")
 
-[node name="NextSongLabel2" type="Label" parent="UI/NextSongUI" unique_id=1858378966]
-offset_left = 888.0
-offset_top = 303.0
-offset_right = 1366.0
-offset_bottom = 351.0
+[node name="NextSongLabel1" type="Label" parent="UI/NextSongUI/IMG_NextSong1" unique_id=147958766]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
-[node name="NextSongLabel3" type="Label" parent="UI/NextSongUI" unique_id=789370212]
-offset_left = 888.0
-offset_top = 351.0
-offset_right = 1366.0
-offset_bottom = 399.0
+[node name="IMG_NextSong2" type="TextureRect" parent="UI/NextSongUI" unique_id=119127505]
+visible = false
+offset_top = 95.0
+offset_right = 1920.0
+offset_bottom = 1175.0
+texture = ExtResource("7_1ipwy")
 
-[node name="NextSongLabel4" type="Label" parent="UI/NextSongUI" unique_id=663241666]
-offset_left = 888.0
-offset_top = 399.0
-offset_right = 1366.0
-offset_bottom = 447.0
+[node name="NextSongLabel2" type="Label" parent="UI/NextSongUI/IMG_NextSong2" unique_id=675237690]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
-[node name="NextSongLabel5" type="Label" parent="UI/NextSongUI" unique_id=572650436]
-offset_left = 888.0
-offset_top = 447.0
-offset_right = 1366.0
-offset_bottom = 495.0
+[node name="IMG_NextSong3" type="TextureRect" parent="UI/NextSongUI" unique_id=2062405819]
+visible = false
+offset_top = 190.0
+offset_right = 1920.0
+offset_bottom = 1270.0
+texture = ExtResource("7_1ipwy")
 
-[node name="NextSongLabel6" type="Label" parent="UI/NextSongUI" unique_id=1210028054]
-offset_left = 888.0
-offset_top = 495.0
-offset_right = 1366.0
-offset_bottom = 543.0
+[node name="NextSongLabel3" type="Label" parent="UI/NextSongUI/IMG_NextSong3" unique_id=1179208640]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
-[node name="NextSongLabel7" type="Label" parent="UI/NextSongUI" unique_id=2119119814]
-offset_left = 888.0
-offset_top = 543.0
-offset_right = 1366.0
-offset_bottom = 591.0
+[node name="IMG_NextSong4" type="TextureRect" parent="UI/NextSongUI" unique_id=466194227]
+visible = false
+offset_top = 285.0
+offset_right = 1920.0
+offset_bottom = 1365.0
+texture = ExtResource("7_1ipwy")
 
-[node name="NextSongLabel8" type="Label" parent="UI/NextSongUI" unique_id=1905249608]
-offset_left = 888.0
-offset_top = 591.0
-offset_right = 1366.0
-offset_bottom = 639.0
+[node name="NextSongLabel4" type="Label" parent="UI/NextSongUI/IMG_NextSong4" unique_id=1369237635]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
-[node name="NextSongLabel9" type="Label" parent="UI/NextSongUI" unique_id=317854544]
-offset_left = 891.0
-offset_top = 639.0
-offset_right = 1369.0
-offset_bottom = 687.0
+[node name="IMG_NextSong5" type="TextureRect" parent="UI/NextSongUI" unique_id=948442815]
+visible = false
+offset_top = 380.0
+offset_right = 1920.0
+offset_bottom = 1460.0
+texture = ExtResource("7_1ipwy")
+
+[node name="NextSongLabel5" type="Label" parent="UI/NextSongUI/IMG_NextSong5" unique_id=1375206585]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="IMG_NextSong6" type="TextureRect" parent="UI/NextSongUI" unique_id=1284349354]
+visible = false
+offset_top = 475.0
+offset_right = 1920.0
+offset_bottom = 1555.0
+texture = ExtResource("7_1ipwy")
+
+[node name="NextSongLabel6" type="Label" parent="UI/NextSongUI/IMG_NextSong6" unique_id=1947860684]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="IMG_NextSong7" type="TextureRect" parent="UI/NextSongUI" unique_id=665599309]
+visible = false
+offset_top = 570.0
+offset_right = 1920.0
+offset_bottom = 1650.0
+texture = ExtResource("7_1ipwy")
+
+[node name="NextSongLabel7" type="Label" parent="UI/NextSongUI/IMG_NextSong7" unique_id=1622764822]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 268.0
+offset_right = 1418.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "1. Player 1 - Lorem Ipsum Est"
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="PhonesUI" type="Node" parent="UI" unique_id=1919679284]
+
+[node name="Player1_Phone" type="TextureRect" parent="UI/PhonesUI" unique_id=1819662864]
+offset_left = 1131.0
+offset_top = -176.99997
+offset_right = 3051.0
+offset_bottom = 903.0
+rotation = 2.443461
+texture = ExtResource("8_sp821")
+
+[node name="ButtonPhone1" type="TextureRect" parent="UI/PhonesUI/Player1_Phone" unique_id=1827876842]
+modulate = Color(0, 0.61960787, 0.4509804, 1)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_pwh0f")
+
+[node name="Label" type="Label" parent="UI/PhonesUI/Player1_Phone/ButtonPhone1" unique_id=1789437841]
+layout_mode = 0
+offset_left = 867.8909
+offset_top = 403.21725
+offset_right = 1062.8896
+offset_bottom = 464.68246
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Enviar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reflect" type="TextureRect" parent="UI/PhonesUI/Player1_Phone" unique_id=1878074376]
+layout_mode = 0
+offset_left = 0.00030517578
+offset_top = 0.00030517578
+offset_right = 1920.0002
+offset_bottom = 1080.0002
+
+[node name="Player2_Phone" type="TextureRect" parent="UI/PhonesUI" unique_id=91905288]
+offset_left = 2268.0
+offset_top = 1063.0
+offset_right = 4188.0
+offset_bottom = 2143.0
+rotation = -2.443461
+texture = ExtResource("8_sp821")
+
+[node name="ButtonPhone2" type="TextureRect" parent="UI/PhonesUI/Player2_Phone" unique_id=1135442767]
+modulate = Color(0.9411765, 0.89411765, 0.25882354, 1)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_pwh0f")
+
+[node name="Label" type="Label" parent="UI/PhonesUI/Player2_Phone/ButtonPhone2" unique_id=1901788287]
+layout_mode = 0
+offset_left = 867.8911
+offset_top = 403.21722
+offset_right = 1062.8898
+offset_bottom = 464.68243
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Enviar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player3_Phone" type="TextureRect" parent="UI/PhonesUI" unique_id=302075994]
+offset_left = -269.00003
+offset_top = -10.000008
+offset_right = 1651.0
+offset_bottom = 1070.0
+rotation = 0.7853982
+texture = ExtResource("8_sp821")
+
+[node name="ButtonPhone3" type="TextureRect" parent="UI/PhonesUI/Player3_Phone" unique_id=1773103542]
+modulate = Color(0.8, 0.4745098, 0.654902, 1)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_pwh0f")
+
+[node name="Label" type="Label" parent="UI/PhonesUI/Player3_Phone/ButtonPhone3" unique_id=2115029702]
+layout_mode = 0
+offset_left = 867.891
+offset_top = 403.21722
+offset_right = 1062.8896
+offset_bottom = 464.68243
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Enviar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player4_Phone" type="TextureRect" parent="UI/PhonesUI" unique_id=690330919]
+offset_left = 797.0001
+offset_top = 1317.0
+offset_right = 2717.0
+offset_bottom = 2397.0
+rotation = -0.7853982
+texture = ExtResource("8_sp821")
+
+[node name="ButtonPhone4" type="TextureRect" parent="UI/PhonesUI/Player4_Phone" unique_id=1647631292]
+modulate = Color(0.8352941, 0.36862746, 0, 1)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_pwh0f")
+
+[node name="Label" type="Label" parent="UI/PhonesUI/Player4_Phone/ButtonPhone4" unique_id=1822332206]
+layout_mode = 0
+offset_left = 867.8911
+offset_top = 403.2173
+offset_right = 1062.8898
+offset_bottom = 464.6825
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Enviar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FingersUI" type="Node" parent="UI" unique_id=292940803]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/FingersUI" unique_id=1507962197]
+libraries/ = SubResource("AnimationLibrary_8h40b")
+
+[node name="Player1" type="TextureRect" parent="UI/FingersUI" unique_id=15077669]
+offset_left = -908.99994
+offset_top = -413.00003
+offset_right = 1011.0003
+offset_bottom = 667.0
+rotation = 0.003298942
+texture = ExtResource("10_yxec2")
+flip_h = true
+
+[node name="Player2" type="TextureRect" parent="UI/FingersUI" unique_id=1710567548]
+offset_left = 939.0
+offset_top = -401.0
+offset_right = 2859.0
+offset_bottom = 679.0
+texture = ExtResource("11_l6jsd")
+
+[node name="Player3" type="TextureRect" parent="UI/FingersUI" unique_id=322436422]
+offset_left = -952.0
+offset_top = 432.0
+offset_right = 968.0
+offset_bottom = 1512.0
+texture = ExtResource("12_i0i8j")
+flip_h = true
+flip_v = true
+
+[node name="Player4" type="TextureRect" parent="UI/FingersUI" unique_id=900625274]
+offset_left = 900.0
+offset_top = 407.0
+offset_right = 2820.001
+offset_bottom = 1487.0
+texture = ExtResource("13_wab8o")
+flip_v = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
